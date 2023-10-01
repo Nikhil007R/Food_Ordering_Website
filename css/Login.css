@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+    background-image: url("../images/login.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/* Navbar */
+header{
+    position: sticky;
+    top: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: 'Bree Serif', serif;
+    background: rgb(0,0,0,.3);
+}
+.logo{
+    margin: 15px 20px;
+    padding: 11px;
+}
+.signingup{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    list-style: none;
+    padding: 3px;
+    height: 50px;
+    margin: 2px;
+}
+.signingup li{
+    padding: 20px;
+    font-size: 20px;
+}
+.signingup li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.signingup li a:hover{
+    text-decoration: underline;
+  text-decoration-color: #ff002d;
+  text-decoration-thickness: 3px;
+  transition: .5s;
+}
+
+    /* font-family: 'Vujahday Script', cursive; */
+
+/* Main Page */
+.login{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+.login .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 400px;
+    min-height: 300px; */
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 0 0px 10px 5px black;
+}
+.login .box .image img{
+    border-right: 2px solid black;
+}
+
+.content{
+    margin: 18px;
+    width: 400px;
+}
+.content .heading{
+    font-size: 22px;
+    font-weight: 700;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.content .input{
+    position: relative;
+}
+.content .input input{
+    height: 45px;
+    width: 337px;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    background: white;
+    border-radius: 10px;
+    margin-top: 22px;
+    padding: 0 5px;    
+    margin-bottom: 10px;
+}
+#Phone_number:focus{
+    border: 3px solid red;
+}
+.form-label{
+    position: absolute;
+    top: 2.3rem;
+    left: 2.3rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+#Phone_number:focus ~.form-label,
+#Phone_number:not(:placeholder-shown)#Phone_number:not(:focus)~.form-label
+{
+    top: .9rem;
+    left: 1.7rem;
+    font-size: 14px;
+    background: white;
+}
+.otp{
+    margin: 12px;
+}
+.otp button{
+    display: flex;
+    align-items: center;
+    width: 376px;
+    justify-content: center;
+    border: 2px solid rgb(204 182 182);
+    border-radius: 60px;
+    font-size: 20px;
+    height: 50px;
+}
+.otp button:hover{
+    background-color: #fd3e3e;
+}
+.line{
+    margin: 16px;
+}
+.line h4::after, .line h4::before{
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 45%;
+    padding: 0px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn a{
+    text-decoration: none;
+}
+.btn button{
+    display: flex;
+    align-items: center;
+    width: 359px;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 32px;
+    height: 50px;
+    margin: 10px;
+}
+.btn span{
+    font-size: 17px;
+    padding: 4px;
+}
+.btn1 {
+    display: flex;
+    justify-content: center;
+}
+.btn1 a{
+    text-decoration: none;
+}
+.btn1 button{
+    display: flex;
+    align-items: center;
+    width: 359px;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 32px;
+    height: 50px;
+    margin: 5px;
+}
+.btn1 span{
+    font-size: 17px;
+    padding: 4px;
+}
+.line1{
+    border: 1px solid #b0afaf;
+    margin: 27px;
+}
+.last{
+    text-align: left;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+}
+.last span a{
+    text-decoration: none;
+    color: #fd3e3e;
+    font-weight: 700;
+}
+

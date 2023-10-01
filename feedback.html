@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Feedback form Using HTML and CSS</title>
+  <link rel="stylesheet" href="css/feedback-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="imgcontainer">
+        <img src="images/image.png" alt="" width="65" height="45">
+        <span class="nav_name">Akatsuki</span>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="title">
+      <h1>Feedback</h1>
+    </div>
+    <form action="#">
+      <div class="contact-form">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="Name" required id="a1"> <br>
+          <input type="text" class="input" placeholder="Email Address" required id="a2"> <br>
+          <input type="text" class="input" placeholder="Phone" required id="a3">
+        </div>
+        <div class="msg">
+          <textarea placeholder="Message" required id="a4"></textarea>
+          <button class="btn" onclick="response()">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    function response() {
+
+      var a = document.getElementById("a1").value;
+      var b = document.getElementById("a2").value;
+      var c = document.getElementById("a3").value;
+      var d = document.getElementById("a4").value;
+
+      if ((a != "") && (b != "") && (c != "") && (d != "")){
+        
+        alert("Thanks " + a + " For Your Valuable Feedback")
+      }
+      else{
+        return false;
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

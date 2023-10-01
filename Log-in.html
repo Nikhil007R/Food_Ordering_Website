@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Akatsuki Log-in</title>
+    <link rel="stylesheet" href="css/Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="myDiv">
+        <nav id="navbar">
+
+            <img src="images/image.png" alt="MyLogo" width="70px" class="logo">
+
+            <ol class="signingup">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="AboutUS.html">About Us</a></li>
+                <li><a href="Log-in.html">Login</a></li>
+                <li><a href="Sign-up.html">Sign Up</a></li>
+            </ol>
+        </nav>
+    </header>
+    <!-- <form action="#" method="post"> -->
+        <div class="login">
+            <div class="box">
+                <div class="image">
+                    <img src="images/signup.png" alt="" width="300px" height="300px">
+                </div>
+                <div class="content">
+                    <div class="heading">
+                        <h1>
+                            Log in
+                        </h1>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="" id="Phone_number" inputmode="numeric" min="999999999"
+                            max="9999999999" placeholder=" " required><label for="" class="form-label">Phone
+                            Number</label>
+                        <p id="validationNumber"></p>
+                    </div>
+                    <div class="otp">
+                        <button onclick="validation()">Send OTP</button>
+                    </div>
+                    <div class="line">
+                        <h4> or </h4>
+                    </div>
+                    <div class="btn">
+                        <a href="https://gmail.google.com/inbox/">
+                        <button>
+                            <img src="images/mail.png" alt="Email-logo" width="35">
+                            <span>Continue with Email </span>
+                        </button>
+                        </a>
+                    </div>
+                    <div class="btn1">
+                        <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.zomato.com%3Fid%3Dauth379924&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=442739719837.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.zomato.com&prompt=select_account&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow">
+                        <button>
+                            <img src="images/google.png" alt="Google_logo" width="35">
+                            <span>Continue with Google</span>
+                        </button>
+                        </a>
+                    </div>
+                    <div class="line1">
+
+                        <!-- just a reminder There is nothing between here  its just a line -->
+
+                    </div>
+                    <div class="last">
+                        <p>New to Akatsuki? <span><a href="Sign-up.html">Create Account</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </form> -->
+
+    <script>
+        function validation() {
+
+            var a = document.getElementById("Phone_number").value;
+
+            if (a == null || a == "") 
+            {
+                document.getElementById("validationNumber").innerHTML = "Please Input Your Phone Number!!";
+                document.getElementById("validationNumber").style.color = "red";
+                return false;
+            }
+            if (isNaN(a)){
+                document.getElementById("validationNumber").innerHTML = "Only Numbers are Required";
+                document.getElementById("validationNumber").style.color = "red";
+                return false;
+            }
+            if (a.length > 10){
+                document.getElementById("validationNumber").innerHTML = "Number Must be 10 Digit";
+                document.getElementById("validationNumber").style.color = "red";
+                return false;
+            }
+            if (a.length < 10){
+                document.getElementById("validationNumber").innerHTML = "Number Must be 10 Digit";
+                document.getElementById("validationNumber").style.color = "red";
+                return false;
+            }
+            if ((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7) && (a.charAt(0)!=6)){
+                document.getElementById("validationNumber").innerHTML = "It Should Start with 9, 8, 7, 6";
+                document.getElementById("validationNumber").style.color = "red";
+                return false;
+            }
+            else
+            {
+                alert("Your Otp is Sent to your Mobile Number");
+            }
+           
+        }
+
+    </script>
+</body>
+
+</html>

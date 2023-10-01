@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <style>
+        #myUL {
+            list-style: none;
+            width: 500px;
+            text-align: left;
+            margin-left: 45px;
+            display: none;
+
+        }
+
+        #myUL li {
+            height: 30%;
+            background-color: rgba(255, 255, 255, 0.479);
+            border: 1px solid black;
+            /* padding: 10px 15px; */
+            border-radius: 10px;
+            text-align: left;
+
+        }
+
+        #myUL li:hover {
+            background-color: lightblue;
+        }
+
+        #myUL li a {
+            color: rgb(255, 0, 0);
+        }
+    </style>
+
+</head>
+
+<body onload="myFunction()">
+    <div id="loader">
+        <img src="images/image-loader.gif" alt="" width="700px" height="550px">
+    </div>
+    <header id="myDiv">
+        <nav id="navbar">
+
+            <img src="images/image.png" alt="MyLogo" width="70px" class="logo">
+            <div class="SocialMediaHandles">
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="blank"><i
+                                class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+                    <li><a href="https://twitter.com/" target="blank"><i
+                                class="fab fa-twitter"></i><span>Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/" target="blank"><i
+                                class="fab fa-instagram"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/" target="blank"><i
+                                class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+                    <li><a href="https://github.com/" target="blank"><i
+                                class="fab fa-github"></i><span>Github</span></a></li>
+                </ul>
+                </ul>
+            </div>
+
+            <ol class="signingup">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="AboutUS.html">About Us</a></li>
+                <li><a href="Log-in.html">Login</a></li>
+                <li><a href="Sign-up.html">Sign Up</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section id="Home">
+
+            <div class="Home-box">
+                <h1 class="first-heading">AKATSUKI</h1>
+                <h2 class="second-heading" id="type"></h2>
+                <div class="inputbox">
+                    <div class="location">
+                        <img src="images/location.png" alt="">
+                    </div>
+                    <input type="text" name="" id="Search" placeholder="Search for Cuisine or a Dish" onkeyup="appearance()">
+                    <input type="submit" value="Search">
+                </div>
+                <ul id="myUL">
+                    <li><a href="Menu.html">Burger</a></li>
+                    <li><a href="Menu.html">Pizza</a></li>
+                    <li><a href="Menu.html">Wraps</a></li>
+                    <li><a href="Menu.html">Shakes</a></li>
+                    <li><a href="Menu.html">Drinks</a></li>
+                </ul>
+                <div class="btn2">
+                    <button class="btn"><a href="tablebooking.html">Book a Table</a></button>
+                    <button id="btn"><a href="Menu.html">View Menu</a></button>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="anything">
+            <div class="work-heading">
+                <p>How It Works</p>
+            </div>
+            <div class="work">
+                <div class="work-image1 Process">
+                    <img src="images/step-1.jpg" alt="">
+                    <p>Choose Your Favourite Food</p>
+                </div>
+                <div class="work-image2 Process">
+                    <img src="images/step-2.jpg" alt="">
+                    <p>Free And Fast Delivery</p>
+                </div>
+                <div class="work-image3 Process">
+                    <img src="images/step-3.jpg" alt="">
+                    <p>Easy Payment Methods</p>
+                </div>
+                <div class="work-image4 Process">
+                    <img src="images/step-4.jpg" alt="">
+                    <p>And Finally, Enjoy Your Food</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="special-dishes">
+            <p class="Dishes-Name">Our Special Dishes</p>
+            <div class="box-container">
+                <div class="img-boxes">
+                    <img src="Menu-Images/italianwrap.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Wraps</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Wraps</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                    </div>
+
+                </div>
+                <div class="img-boxes">
+                    <img src="images/chocolate-shake.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Shake</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Shake</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                    </div>
+
+                </div>
+                <div class="img-boxes">
+                    <img src="images/Pizza.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Pizza</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Pizza</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="box-container2">
+                <div class="img-boxes">
+                    <img src="images/Ramen.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Ramen</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Ramen</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                        
+                    </div>
+
+                </div>
+                <div class="img-boxes">
+                    <img src="images/Burger.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Burger</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Burger</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                    </div>
+
+                </div>
+                <div class="img-boxes">
+                    <img src="images/sushi.jpg" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>Sushi</p>
+                    <div class="img-overlay">
+                        <div class="img-title">Sushi</div>
+                        <a href="Payment.html"><input type="button" value="Buy Now" id="Buy" ></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <section class="review-container">
+            <h1>Our Guests Love us</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure nisi numquam in incidunt perspiciatis
+                magnam vero odio quam alias.</p>
+
+            <div class="main-box">
+                <div class="Review-box">
+                    <div class="image-box">
+                        <img src="images/men1.jpg" alt="" width="150px">
+                    </div>
+
+                    <div class="review-comment-box">
+                        <p class="Name">Naman</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                        </div>
+                        <p class="comment">Definitely one of my few favourite restaurant in Chandigarh, the choice in
+                            the food is ridiculous and the taste as well, all the dishes taste different like they are
+                            distinct, where as in at majority of the restaurants the dishes tastes the same.</p>
+                    </div>
+                </div>
+
+                <div class="Review-box">
+                    <div class="image-box">
+                        <img src="images/men2.jpg" alt="" width="150px">
+                    </div>
+
+                    <div class="review-comment-box">
+                        <p class="Name">Sam</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="comment">Ok So How can i say, its the best food i ever had!!! Food is really good, we
+                            loved it. Its my first time having dinner here, if someone is reading this, just don't think
+                            about it go for it .
+                        </p>
+                    </div>
+                </div>
+
+                <div class="Review-box">
+                    <div class="image-box">
+                        <img src="images/men3.jpg" alt="" width="150px">
+                    </div>
+
+                    <div class="review-comment-box">
+                        <p class="Name">Navya</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="comment">Lovely food, excellent service. Like all of view.
+                            It was wonderful gravy items that was enjoy with my friends. My friends were also happy with
+                            new taste and quality. Will try more in coming days special of my house functions.</p>
+                    </div>
+                </div>
+
+                <div class="Review-box">
+                    <div class="image-box">
+                        <img src="images/pic4.jpg" alt="" width="150px">
+                    </div>
+
+                    <div class="review-comment-box">
+                        <p class="Name">Anurag</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                        </div>
+
+                        <p class="comment">Nicely-Lovely food, really enjoyed with family. I placed order to see name
+                            and we really appreciate by them. Will order again and again. Thanx.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="map" style="margin-bottom: 20px;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.0291291415!2d76.69348869015064!3d30.73506264434184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee131f9626bf%3A0x3cceaa003e243f79!2s2928%2C%20Ambedkar%20Awas%20Yojna%2C%20Sector%2056%2C%20Chandigarh%2C%20160055!5e0!3m2!1sen!2sin!4v1643269620143!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+
+    </main>
+
+    <footer id="footer">
+
+        <div class="footer-container">
+
+            <div class="copyright">
+                <img src="images/image.png" alt="myimg" width="100px"><span>AKATSUKI</span>
+                <p>Copyright &copy; NNN Pvt. Ltd.</p>
+            </div>
+
+        </div>
+
+        <div class="other-instruction">
+            <div class="part1">
+                <ul class="instruction-bar">
+                    <li> <a href="#">Get help</a> </li>
+                    <li> <a href="#">Buy Gift Cards</a> </li>
+                    <li> <a href="#">Sign Up to Delivery</a> </li>
+                    <li> <a href="#">Create a Business account</a> </li>
+                    <li> <a href="#">Save On Your First Order</a> </li>
+                </ul>
+            </div>
+            <div class="part2">
+                <ul class="instruction-bar">
+                    <li> <a href="#">About Us</a> </li>
+                    <li> <a href="#">Privacy Policy</a> </li>
+                    <li> <a href="#">Terms & Condition</a> </li>
+                    <li> <a href="#">Akatsuki Stories</a> </li>
+                    <li> <a href="#">Language</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-handles">
+            <div class="part1">
+                <p>Follow Us On</p>
+                <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://web.telegram.org/k/" target="blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+            <div class="part2">
+                <p>Contact Us</p>
+                <div class="phone">
+                    <img src="images/telephone.png" alt=""><span>1800-235-3598</span>
+                </div>
+                <div class="email">
+                    <img src="images/email.png" alt=""><span>ContactAkatsuki@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <script type="text/javascript">
+        var i = 0;
+        var txt = "Welcome To Our Website and Discover The Best Food In Chandigarh.";
+
+        function typing() {
+            document.getElementById("type").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typing, 100);
+        }
+        typing();
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+
+        function appearance(){
+            
+            var filter = document.getElementById("Search").value.toUpperCase();
+            
+            var ul = document.getElementById("myUL");
+            var li = ul.getElementsByTagName("li");
+
+            for(var i=0; i<li.length; i++){
+                var a = li[i].getElementsByTagName("a")[0];
+                
+                var textvalue = a.innerText;
+                
+                if(textvalue.toUpperCase().indexOf(filter) > -1){
+                    li[i].style.display = "block";
+                    
+                }
+                else{
+                    li[i].style.display = "none";
+                }
+            }
+            
+            
+            document.getElementById("myUL").style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>

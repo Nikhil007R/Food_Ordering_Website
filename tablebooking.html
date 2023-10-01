@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/tablestyle.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="container-time">
+            <h2 class="heading">Time Open</h2>
+            <h3 class="heading-days">Monday-Friday</h3>
+            <p>7am - 11am (breakfast)</p>
+            <p>11am - 10pm (lunch/dinner)</p>
+
+            <h3 class="heading-days">Saturday and sunday</h3>
+            <p>9am - 1pm (breakfast)</p>
+            <p>1am - 10pm (lunch/dinner)</p>
+
+            <hr>
+
+            <h4 class="heading-phone">Call Us: (+91) 8146139061, 9994565376</h4>
+        </div>
+
+        <div class="container-form">
+            <form action="bookingconfimed.html">
+                <h2 class="heading heading-yellow">Reservation Online</h2>
+
+                <div class="form-field">
+                    <p>Your Name</p>
+                    <input type="text" placeholder="Your Name" required id="Name">
+                </div>
+                <div class="form-field">
+                    <p>Your email</p>
+                    <input type="email" placeholder="Your email" required id="Email">
+                </div>
+                <div class="form-field">
+                    <p>Date</p>
+                    <input type="date" required id="Date">
+                </div>
+                <div class="form-field">
+                    <p>Time</p>
+                    <input type="time" required id="Time">
+                </div>
+                <div class="form-field">
+                    <p>How many people?</p>
+                    <select name="select" id="Person" required>
+                        <option value="1">1 person</option>
+                        <option value="2">2 persons</option>
+                        <option value="3">3 persosn</option>
+                        <option value="4">4 persons</option>
+                        <option value="5">5 persons</option>
+                        <option value="5+">5+ persons</option>
+                    </select>
+                </div>
+
+                <button class="btn" onclick="response()">Submit</button>
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function response() {
+            var a = document.getElementById("Name").value;
+            var b = document.getElementById("Email").value;
+            var c = document.getElementById("Date").value;
+            var d = document.getElementById("Time").value;
+
+
+            if((a != "") && (b != "") && (c != "") && (d != "")){
+
+                alert("Your table is reserved")
+            }
+            else{
+                document.getElementById("message").innerHTML = "Please Fill All the Inputs.";
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").style.fontWeight = "bold";
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
